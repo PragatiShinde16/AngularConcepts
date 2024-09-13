@@ -1,0 +1,12 @@
+<hr><hr>
+<p style="font-weight: bold;">classbinding works!</p>
+
+<!-- 
+    - If u want apply classess dynamically 
+    synatx 
+    [class]="propertyName"
+    - U can apply any html tag 
+-->
+
+<h2 [class]="mycolor">Apply class binding</h2>
+<h2 [class.danger] = "rating < 4" [class.warning] = "rating > 4">Apply class binding on condition</h2>

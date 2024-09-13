@@ -1,0 +1,17 @@
+.success{
+    color: green;
+}
+
+.danger{
+    color: red;
+}
+
+.warning{
+    color: orange;
+}
+
+.special{
+    font-size: 53px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-transform: uppercase;
+}
