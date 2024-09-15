@@ -1,0 +1,42 @@
+<hr><hr>
+<p style="font-weight: bold;">eventbinding1 works!</p>
+
+<!-- 
+    * Event Binding :-
+        - Data flow from view to component.
+        - Syntax :-
+                (eventName)="eventHandler"
+        - You can apply on any tag of html
+-->
+
+<!-- Click Event -->
+
+<button (click)="onClick()">Click</button><br><br>
+<img src="../../assets/bg.jpg" alt="" (click)="onImage()" title="on image click">
+<br><br>
+
+
+<!-- 
+    * Template reference variable : 
+            - It is used for hold the object or reference.
+            - as per requirement you can manipulate/manage the behaviour also but for that object is necessary.
+            - It is denoted as a #
+            - Syntax :-
+                    #uniqueName
+    
+-->
+
+<!-- 
+    * Template reference variable : First way : Here we can send complete object to component
+-->
+
+<input #myInput type="text" placeholder="Enter name"><br><br>
+<button (click) = onSend(myInput)>Send</button>
+<br><br>
+
+<!-- 
+    * Template reference variable : Second way : Here we can send only data to component
+-->
+
+<input #myInput1 type="text" placeholder="Enter name"><br><br>
+<button (click) = onSend1(myInput1.value)>Send</button>

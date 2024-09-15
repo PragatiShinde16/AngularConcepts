@@ -3,10 +3,24 @@
 
 <!-- 
     - If u want apply classess dynamically 
-    synatx 
-    [class]="propertyName"
+    - synatx :-
+            [class]="propertyName"
     - U can apply any html tag 
 -->
 
 <h2 [class]="mycolor">Apply class binding</h2>
 <h2 [class.danger] = "rating < 4" [class.warning] = "rating > 4">Apply class binding on condition</h2>
+
+
+<!-- ngClass Directive 
+    - it is attribute directive
+    - it is used for apply multiple classes
+    - You have to set json object 
+    - Syntax :-
+        [ngClass] = "propertyName"
+    - It is apply on any html tag 
+-->
+
+<div [ngClass] = "jsonObj">
+    Apply ngClass attribute directive
+</div>
