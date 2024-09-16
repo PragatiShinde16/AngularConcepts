@@ -1,0 +1,25 @@
+<p>eventbinding2 works!</p>
+
+<!-- Real Time Example - 1 -->
+
+<label for="">Number 1 : &nbsp;&nbsp;</label>
+<input #num1 type="number" class="form-control w-25" placeholder="Enter number1"><br>
+<label for="">Number 2 : &nbsp;&nbsp;</label>
+<input #num2 type="number" class="form-control w-25" placeholder="Enter number2"><br>
+
+<button (click) = "onAdd(num1.value, num2.value)" type="button" class="btn btn-success form-control w-25">Addition</button>
+<br><br>
+<input [value] = "isResult" type="number" class="form-control w-25" placeholder="Result"><br><br>
+
+<hr><hr><hr>
+
+<!-- Real Time Example - 2 -->
+
+<label for="">Number : &nbsp;&nbsp;</label><br>
+<input #num type="number" class="form-control w-25" placeholder="Enter number"><br>
+<button (click) = "onFind(num.value)" type="button" class="btn btn-success form-control w-25">Find</button><br>
+<!-- <input [value] = "isFind" type="text" class="form-control w-25" placeholder="Find"><br><br><br> -->
+ <br>
+ <div>
+    {{isFind}}
+ </div>

@@ -10,6 +10,9 @@ import { PropertybindingComponent } from './propertybinding/propertybinding.comp
 import { StylebindingComponent } from './stylebinding/stylebinding.component';
 import { ClassbindingComponent } from './classbinding/classbinding.component';
 import { Eventbinding1Component } from './eventbinding1/eventbinding1.component';
+import { Eventbinding2Component } from './eventbinding2/eventbinding2.component';
+import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,11 +23,14 @@ import { Eventbinding1Component } from './eventbinding1/eventbinding1.component'
     PropertybindingComponent,
     StylebindingComponent,
     ClassbindingComponent,
-    Eventbinding1Component
+    Eventbinding1Component,
+    Eventbinding2Component,
+    TwowaydatabindingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

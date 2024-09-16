@@ -1,0 +1,21 @@
+<hr><hr><hr>
+
+<p>twowaydatabinding works!</p>
+
+<!-- 
+    * Two Way Data Binding :-
+                - It is key feature of angular
+                - You will get updated data into the property.
+                - You can apply on any html tag
+
+                ** ngModel :-
+                        - It is attribute directive.
+                        - We have to import formsModule in app.module.ts file under import section.
+                        - We have to use the notation i.e banana in the box notation.
+                        - Syntax :-
+                                [()] :- banana in the box notation
+                                [(ngModel)] = "propertyName"
+ 
+-->
+
+<input [(ngModel)] = "name" class="form-control w-25" type="text" placeholder="Enter Name"><br>{{name}}
