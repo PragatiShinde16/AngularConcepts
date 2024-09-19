@@ -13,6 +13,9 @@ import { Eventbinding1Component } from './eventbinding1/eventbinding1.component'
 import { Eventbinding2Component } from './eventbinding2/eventbinding2.component';
 import { TwowaydatabindingComponent } from './twowaydatabinding/twowaydatabinding.component';
 import { FormsModule } from '@angular/forms';
+import { Eventbinding3Component } from './eventbinding3/eventbinding3.component';
+import { IfdirectiveComponent } from './ifdirective/ifdirective.component';
+import { FordirectiveComponent } from './fordirective/fordirective.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +28,10 @@ import { FormsModule } from '@angular/forms';
     ClassbindingComponent,
     Eventbinding1Component,
     Eventbinding2Component,
-    TwowaydatabindingComponent
+    TwowaydatabindingComponent,
+    Eventbinding3Component,
+    IfdirectiveComponent,
+    FordirectiveComponent
   ],
   imports: [
     BrowserModule,

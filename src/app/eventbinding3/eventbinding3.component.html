@@ -1,0 +1,25 @@
+<hr><hr>
+
+<p>eventbinding3 works!</p>
+
+<!-- * Change Event :-
+            - change is event name.
+            - change event occur in three ways :-
+                    * Authorised way :-
+                            1. after entering the data in input tag then click anywhere on the screen then change event occur.
+                            2. after entering the data in input tag then click tab button.
+                            3. after entering the data in input tag then click enter button.
+                    - Above three ways used for ignore focus on the input and used for occur change event. 
+            - Syntax :-
+                    (change) = "change_event_name()"
+-->
+
+<!-- <input #input1 type="text" (change) = "onChange()" placeholder="Enter Name :">
+<div>
+    {{isSuggestion}}
+</div><br><br> -->
+
+<input #input1 type="text" (change) = "onChange(input1.value)" placeholder="Enter Name :">
+<div [style.color] = "isSuggestion != '' ? 'green':'red'">
+    {{isSuggestion}}
+</div><br><br>

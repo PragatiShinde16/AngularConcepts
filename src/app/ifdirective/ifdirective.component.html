@@ -1,0 +1,26 @@
+<hr><hr>
+<p>ifdirective works!</p>
+
+<!-- 1. *ngIf :-
+            - It is structural directive.
+            - It is used for if you want to check condition dynamically & modify your DOM structure accordingly.
+            - It is apply on any html tag.
+            - Syntax :-
+                        *ngIf = "condition"
+
+    2. <ng-template> :-
+            - It is componenet directive.
+-->
+
+<!-- <div *ngIf = "rating < 4">
+    <h2>Condition is true.....</h2>
+</div> -->
+
+<!-- Using else for that use <ng-template> directive -->
+
+<div *ngIf = "rating < 4; else myelsepart">
+    <h2>Condition is true.....</h2>
+</div>
+<ng-template #myelsepart>
+    <h2>Condition is false.....</h2>
+</ng-template>

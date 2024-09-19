@@ -1,0 +1,17 @@
+<hr><hr>
+<p>fordirective works!</p>
+
+<!-- *ngFor :-
+            - if you want to irritate dynamically(array).
+            - it will perform element by element.
+            - Apply on any html tag.
+            - Syntax :-
+                    *ngFor = "let item of array_name"
+-->
+
+<ul>
+    <!-- By using only one li we can display all array data by using ngFor -->
+    <li *ngFor = "let item of course">
+        {{item}}
+    </li>
+</ul>
