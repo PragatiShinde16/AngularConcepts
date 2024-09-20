@@ -1,0 +1,40 @@
+<hr><hr>
+<p>switchdirective works!</p>
+
+<!-- *ngSwitch :-
+                - It is used for execute a specific case.
+                - Syntax :-
+
+                        <div [ngSwitch] = "propertyName">
+                            <div *ngSwitchCase = "expression/condition"></div>
+                            <div *ngSwitchCase = "expression/condition"></div>
+                            <div *ngSwitchDefault = "expression/condition"></div>
+                        </div>
+-->
+
+<!-- Real time example of *ngswitch directive :-
+                                            1. Make a UI
+                                            2. Create template reference variable
+                                            3. Apply Event binding
+                                            4. Logic process
+                                            5. Apply *ngSwitch directive on div
+                                            6. Apply String Interpolation
+                                            6. Apply Style binding
+-->
+
+<input #inputcolor type="text" placeholder="Enter Color" class="form-control w-25"><br>
+<button (click)="onSend(inputcolor.value)" class="btn btn-success form-control w-25">Send</button>
+<hr>
+<div [ngSwitch] = "isChoice">
+    <div *ngSwitchCase = "'pink'" [style.background]="isChoice">Your color is {{isChoice}}....</div>
+    <div *ngSwitchCase = "'aqua'" [style.background]="isChoice">Your color is {{isChoice}}....</div>
+    <div *ngSwitchCase = "'green'" [style.background]="isChoice">Your color is {{isChoice}}....</div>
+    <!-- <div *ngSwitchDefault [style.background] = "isChoice == '' ? 'black':'orange'">Your color is wrong {{isChoice}}....</div> -->
+    <div *ngSwitchDefault 
+    [ngStyle] = "{
+        'background': isChoice == '' ? 'black':'orange',
+         'color':isChoice == '' ? 'white':'black'
+    }">Your color is wrong {{isChoice}}....</div>
+</div>
+
+<br>

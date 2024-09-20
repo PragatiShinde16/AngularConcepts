@@ -16,6 +16,7 @@ import { FormsModule } from '@angular/forms';
 import { Eventbinding3Component } from './eventbinding3/eventbinding3.component';
 import { IfdirectiveComponent } from './ifdirective/ifdirective.component';
 import { FordirectiveComponent } from './fordirective/fordirective.component';
+import { SwitchdirectiveComponent } from './switchdirective/switchdirective.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { FordirectiveComponent } from './fordirective/fordirective.component';
     TwowaydatabindingComponent,
     Eventbinding3Component,
     IfdirectiveComponent,
-    FordirectiveComponent
+    FordirectiveComponent,
+    SwitchdirectiveComponent
   ],
   imports: [
     BrowserModule,

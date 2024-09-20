@@ -15,3 +15,31 @@
         {{item}}
     </li>
 </ul>
+
+<hr>
+
+<!-- Array Of Object -->
+
+<div class="container">
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>Prod_id</th>
+                <th>Prod_name</th>
+                <th>Prod_price</th>
+                <th>Prod_qty</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- if you want index as per array index then use ;index after arrayName -->
+            <tr *ngFor = "let item of arrProduct;index as i">
+                <td>{{i}}</td>
+                <!-- <td>{{i + 1}}</td> -->
+                <td>{{item.name}}</td>
+                <td>{{item.price}}</td>
+                <td>{{item.qty}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br>
