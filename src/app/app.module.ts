@@ -17,6 +17,10 @@ import { Eventbinding3Component } from './eventbinding3/eventbinding3.component'
 import { IfdirectiveComponent } from './ifdirective/ifdirective.component';
 import { FordirectiveComponent } from './fordirective/fordirective.component';
 import { SwitchdirectiveComponent } from './switchdirective/switchdirective.component';
+import { Parent1inputdecoratorComponent } from './parent1inputdecorator/parent1inputdecorator.component';
+import { Child1inputdecoratorComponent } from './child1inputdecorator/child1inputdecorator.component';
+import { Parent1outputdecoratorComponent } from './parent1outputdecorator/parent1outputdecorator.component';
+import { Child1outputdecoratorComponent } from './child1outputdecorator/child1outputdecorator.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +37,11 @@ import { SwitchdirectiveComponent } from './switchdirective/switchdirective.comp
     Eventbinding3Component,
     IfdirectiveComponent,
     FordirectiveComponent,
-    SwitchdirectiveComponent
+    SwitchdirectiveComponent,
+    Parent1inputdecoratorComponent,
+    Child1inputdecoratorComponent,
+    Parent1outputdecoratorComponent,
+    Child1outputdecoratorComponent,
   ],
   imports: [
     BrowserModule,

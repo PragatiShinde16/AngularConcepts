@@ -1,0 +1,31 @@
+<hr>
+<p>child1inputdecorator works!</p>
+<h2>This is input decorator......</h2>
+
+<!-- for sending string msg -->
+<h4>{{ParentStringMsg}}</h4>
+
+<!-- For sending json obj -->
+<div>{{ParentJsonObj.id}}</div>
+<div>{{ParentJsonObj.fname}}</div>
+<div>{{ParentJsonObj.lname}}</div>
+
+<!-- For sending array obj -->
+ <table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Fruit_id</th>
+            <th>Fruit_name</th>
+            <th>Fruit_price</th>
+            <th>Fruit_qty</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr  *ngFor = "let item of ParentArrObj;index as i">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.qty}}</td>
+        </tr>
+    </tbody>
+ </table>

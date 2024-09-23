@@ -1,0 +1,46 @@
+<hr><hr>
+<p>parent1outputdecorator works!</p>
+
+<h2>This is output decorator......</h2>
+
+<!-- Output Decorator :-
+                    - It used for sending data from child component to parent component.
+                    - It is property level decorator.
+                    - @Output
+-->
+
+
+<!-- sending string -->
+<h4>{{childStrDataReceived}}</h4>
+
+
+<!-- sending json obj -->
+<div>{{childJsonObjReceived.id}}</div>
+<div>{{childJsonObjReceived.fname}}</div>
+<div>{{childJsonObjReceived.lname}}</div>
+
+
+<!-- sending array of object -->
+<table class="table table-bordered">
+    <!-- <thead>
+        <tr>
+            <th>Fruit_id</th>
+            <th>Fruit_name</th>
+            <th>Fruit_price</th>
+            <th>Fruit_qty</th>
+        </tr>
+    </thead> -->
+    <tbody>
+        <tr  *ngFor = "let item of childArrObjReceived;index as i">
+            <td>{{i+1}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.price}}</td>
+            <td>{{item.qty}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<app-child1outputdecorator (childStrEvent) = "childStrDataReceived = $event" 
+                           (childJsonObjEvent) = "childJsonObjReceived = $event"
+                           (childArrObjEvent) = "childArrObjReceived = $event">
+</app-child1outputdecorator>
