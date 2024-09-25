@@ -21,6 +21,7 @@ import { Parent1inputdecoratorComponent } from './parent1inputdecorator/parent1i
 import { Child1inputdecoratorComponent } from './child1inputdecorator/child1inputdecorator.component';
 import { Parent1outputdecoratorComponent } from './parent1outputdecorator/parent1outputdecorator.component';
 import { Child1outputdecoratorComponent } from './child1outputdecorator/child1outputdecorator.component';
+import { InbuiltpipeComponent } from './inbuiltpipe/inbuiltpipe.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { Child1outputdecoratorComponent } from './child1outputdecorator/child1ou
     Child1inputdecoratorComponent,
     Parent1outputdecoratorComponent,
     Child1outputdecoratorComponent,
+    InbuiltpipeComponent,
   ],
   imports: [
     BrowserModule,

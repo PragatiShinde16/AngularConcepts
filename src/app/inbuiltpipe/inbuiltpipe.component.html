@@ -1,0 +1,73 @@
+<hr><hr>
+<p>inbuiltpipe works!</p>
+
+<!-- *Pipe :- 
+            - It is used to transform your data without changing its original value.
+            - Pipe is only apply on property.
+            - Pipe indicate by using |
+-->
+<!-- * Inbuilt pipe :-
+                - Syntax : 
+                        {{propertyName}} | pipeName
+-->
+
+<!-- Following are the some string pipe -->
+<h4>{{strData}}</h4>
+<h4>{{strData | lowercase}}</h4>
+<h4>{{strData | uppercase}}</h4>
+<!-- titlecase :- it is used for first letter convert into capital -->
+<h4>{{strData | titlecase}}</h4>
+<!-- slice :- it is used for copy -->
+<h4>{{strData | slice:0:10}}</h4>
+
+<hr>
+
+<!-- Percent pipe -->
+<h4>{{0.25 | percent}}</h4>
+<h4>{{0.025 | percent}}</h4>
+<h4>{{0.025 | percent:'1.1'}}</h4>
+<h4>{{0.09123 | percent:'2.2'}}</h4>
+
+<hr>
+
+<!-- currency pipe :
+                    - if we use only currency pipe then it will display default currency i.e $
+-->
+
+<h4>{{0.25 | currency}}</h4>
+<!-- this is used for display contry symbol. INR : indian code -->
+<h4>{{25 | currency : 'INR'}}</h4>
+<!-- this is used for display contry code -->
+<h4>{{25 | currency : 'INR':'code'}}</h4>
+<!-- GBP : it is great britian contry code -->
+<h4>{{25 | currency : 'GBP'}}</h4>
+
+<hr>
+
+<!-- number pipe :-  
+                - Syntax :- 
+                        - anyNumber | number : 'before point number.range'
+                        - ex :  1.2-3 means before point number.min-max
+-->
+<h4>{{5.6743462 | number : '1.2-3'}}</h4>
+<h4>{{5.678456 | number : '1.2-3'}}</h4>
+<h4>{{5.678556 | number : '2.2-3'}}</h4>
+<h4>{{5.6 | number : '2.2-3'}}</h4>
+<h4>{{65.678556 | number : '1.2-3'}}</h4>
+
+<hr>
+
+<!-- Date pipe :-
+                - - if we use only date pipe then it will display default date i.e mediumDate.
+-->
+<h4>{{myDate}}</h4>
+<h4>{{myDate | date}}</h4>
+<h4>{{myDate | date : 'mediumDate'}}</h4>
+<h4>{{myDate | date : 'longDate'}}</h4>
+<h4>{{myDate | date : 'shortDate'}}</h4>
+<h4>{{myDate | date : 'dd-MM-yyyy'}}</h4>
+<h4>{{myDate | date : 'dd/MM/yyyy'}}</h4>
+
+<!-- Chaining of pipe :- it means apply one pipe on another pipe -->
+
+<h4>{{myDate | date : 'longDate' | uppercase}}</h4>

@@ -46,6 +46,8 @@ export class Child1outputdecoratorComponent {
   ]
 
   onSend(){
+
+    // emit() :- This method is used for generate the event.
     this.childStrEvent.emit(this.msg);
     this.childJsonObjEvent.emit(this.jsonObj);
     this.childArrObjEvent.emit(this.arrObj);

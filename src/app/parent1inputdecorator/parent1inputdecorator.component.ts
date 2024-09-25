@@ -7,14 +7,17 @@ import { Component } from '@angular/core';
 })
 export class Parent1inputdecoratorComponent {
 
+  // create string
   msg:string="Welcome to angular........";
   
+  // create json obj
   jsonObj={
     id : 1,
     fname : "Pragati",
     lname : "Shinde"
   }
 
+  // create array obj
   arrObj:any[]=[
     {
       name:"Apple",

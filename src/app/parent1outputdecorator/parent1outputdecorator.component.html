@@ -6,21 +6,22 @@
 <!-- Output Decorator :-
                     - It used for sending data from child component to parent component.
                     - It is property level decorator.
-                    - @Output
+                    - Syntax :-
+                            @Output() propertyName
 -->
 
 
-<!-- sending string -->
+<!-- display string -->
 <h4>{{childStrDataReceived}}</h4>
 
 
-<!-- sending json obj -->
+<!-- display json obj -->
 <div>{{childJsonObjReceived.id}}</div>
 <div>{{childJsonObjReceived.fname}}</div>
 <div>{{childJsonObjReceived.lname}}</div>
 
 
-<!-- sending array of object -->
+<!-- display array of object -->
 <table class="table table-bordered">
     <!-- <thead>
         <tr>
