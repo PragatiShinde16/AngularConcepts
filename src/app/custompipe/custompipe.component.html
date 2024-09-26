@@ -1,0 +1,21 @@
+<hr><hr>
+<p>custompipe works!</p>
+
+<!-- Custom Pipe :-
+                - It is user define pipe.
+                - If want to hide some part send by backend for that we use custom pipe.
+                - For create custom pipe we use PipeTransform interface and use their method i.e transform method.
+                - Syntax of transform method :-
+                        - transform(value:datatype, ...item:datatype[])
+                        - ...item:datatype[] :- it is called rest parameter
+
+                - After that on class level we use one decorator i.e @Pipe
+                - Pipe is a class level decorator
+                - And we can create pipe through command i.e ng g p pipeName
+-->
+
+<div>{{strDetails}}</div>
+<hr>
+<div>{{strDetails | summary}}</div>
+<hr>
+<div>{{strDetails | summary:0:15}}</div>
