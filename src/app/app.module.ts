@@ -24,6 +24,8 @@ import { Child1outputdecoratorComponent } from './child1outputdecorator/child1ou
 import { InbuiltpipeComponent } from './inbuiltpipe/inbuiltpipe.component';
 import { CustompipeComponent } from './custompipe/custompipe.component';
 import { SummaryPipe } from './summary.pipe';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpmethodComponent } from './httpmethod/httpmethod.component';
 
 @NgModule({
   declarations: [
@@ -48,11 +50,13 @@ import { SummaryPipe } from './summary.pipe';
     InbuiltpipeComponent,
     CustompipeComponent,
     SummaryPipe,
+    HttpmethodComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,19 +1,21 @@
 <hr><hr>
 <p style="font-weight: bold;">stylebinding works!</p>
+<hr>
 
-<!-- 
-    - If u want apply style Dynamically then we use style Binding
-    - syntax => [style.cssPropertyName]="PropertyName"
+<!-- * Style Binding :-
+                    - If u want apply style Dynamically then we use style Binding.
+                    - syntax => 
+                            [style.cssPropertyName]="PropertyName"
 -->
 
 <h2 [style.background-color]="mycolor">Apply Style Binding</h2>
 <h2 [style.background-color] = "rating < 4 ? 'red':'green'">Apply Style Binding on condition</h2>
 
-<!-- ngStyle 
-    - It is attribute directive 
-    - If u want multiple css property then we use ngStyle 
-    - U can apply any HTML tags 
-    - we required a json object to set property 
+<!-- * ngStyle :- 
+            - It is attribute directive.
+            - If u want multiple css property then we use ngStyle.
+            - U can apply any HTML tags.
+            - we required a json object to set property.
 -->
 
 <h2 [ngStyle] = "jsonObj">Apply ngStyle on Style Binding</h2>
