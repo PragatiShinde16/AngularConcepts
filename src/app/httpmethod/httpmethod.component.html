@@ -17,14 +17,14 @@
 <hr>
 
 <!-- Create a UI for update data -->
-<div>
+<div [hidden] = "ishidden">
     <label for="">Id ::</label>
-    <input class="form-control w-25" type="text" placeholder="Enter Id"><br>
+    <input [(ngModel)] = "myid" class="form-control w-25" type="text" placeholder="Enter Id" readonly><br>
     <label for="">Title ::</label>
-    <input class="form-control w-25" type="text" placeholder="Enter Title"><br>
+    <input [(ngModel)] = "mytitle" class="form-control w-25" type="text" placeholder="Enter Title"><br>
     <label for="">Body ::</label>
-    <input class="form-control w-25" type="text" placeholder="Enter Body"><br>
-    <button class="btn btn-info form-control w-25" type="button">Update</button>
+    <input [(ngModel)] = "mybody" class="form-control w-25" type="text" placeholder="Enter Body"><br>
+    <button class="btn btn-info form-control w-25" type="button" (click) = "onUpdate()">Update</button>
 </div>
 
 <hr>
@@ -43,7 +43,9 @@
         <tr *ngFor = "let item of posts">
             <td>{{item.id}}</td>
             <!-- here we create button for update data. After that we use event binding concept for sending data html file to component file. And then that data fetch into update UI(html file) for update the data. -->
-            <td><button (click) = "onEdit(item)" type="button" class="btn btn-warning">Edit</button></td>
+            <td><button (click) = "onEdit(item)" type="button" class="btn btn-warning">Edit</button><br>
+            <!-- here we create button for delete data. After that we use event binding concept for sending id html file to component file. for delete the data. -->
+            <button (click) = "onDelete(item.id)" type="button" class="btn btn-danger mt-2">Delete</button></td>
             <td>{{item.title}}</td>
             <td>{{item.body}}</td>
         </tr>

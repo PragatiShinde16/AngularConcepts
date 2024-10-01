@@ -23,8 +23,19 @@ export class HttpService {
     return (this.http.get(this.url));
   }
 
-  // for insert data
+  // for insert the record
   postData(obj:any){
     return (this.http.post(this.url, obj));
+  }
+
+  // for update the record
+  updateData(obj:any){
+    // `` :- Backtick used for modify the url or concat the url
+    return (this.http.put(`${this.url}/${obj.id}`, obj));
+  }
+
+  // For delete the record
+  deleteData(id:any){
+    return (this.http.delete(`${this.url}/${id}`));
   }
 }
