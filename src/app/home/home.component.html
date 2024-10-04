@@ -1,0 +1,29 @@
+<hr><hr><hr><hr><h2>Routing Start........</h2>
+<p>home works!</p>
+
+<!-- * Routing :-
+                - Navigate from one page to another page.
+                - For that its necessary to doing three steps :-
+                                1. Configure the route in app.routing.module.ts
+                                2. Use <router-outlet> in any html file. here we used in app.component.html file.
+                                3. Establish the link/navigate between the component.
+
+     * <router-outlet> :- 
+                    - It is a component directive.
+
+     * routerLink :- 
+                    - It is atribute directive. 
+-->
+
+<a routerLink="/Page1">Page1</a>
+<!-- 
+    - here we do property binding
+    - syntax :-
+            [routerLink] = "['pathName', propertyName]"
+            - here on 0th index always take a path in string format and on 1st index take a property which we declare in ts file
+            
+    - Ex :-
+            [routerLink]="['/Page2', myid]"
+-->
+<a [routerLink]="['/Page2', myid]">Page2</a>
+<a routerLink="/Follower">Follower</a>

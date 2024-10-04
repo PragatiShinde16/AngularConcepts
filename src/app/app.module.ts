@@ -26,6 +26,12 @@ import { CustompipeComponent } from './custompipe/custompipe.component';
 import { SummaryPipe } from './summary.pipe';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpmethodComponent } from './httpmethod/httpmethod.component';
+import { HomeComponent } from './home/home.component';
+import { Page1Component } from './page1/page1.component';
+import { Page2Component } from './page2/page2.component';
+import { FollowerComponent } from './follower/follower.component';
+import { MyfollowerComponent } from './myfollower/myfollower.component';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 @NgModule({
   declarations: [
@@ -51,6 +57,12 @@ import { HttpmethodComponent } from './httpmethod/httpmethod.component';
     CustompipeComponent,
     SummaryPipe,
     HttpmethodComponent,
+    HomeComponent,
+    Page1Component,
+    Page2Component,
+    FollowerComponent,
+    MyfollowerComponent,
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,
