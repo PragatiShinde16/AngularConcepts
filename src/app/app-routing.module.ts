@@ -31,6 +31,10 @@ const routes: Routes = [
     path:"Myfollower", component:MyfollowerComponent
   },
   {
+    // It is fpr lazy loading
+    path:"user", loadChildren:()=>import("./user/user.module").then(m=>m.UserModule)
+  },
+  {
     // ** : - It is wild cart operator. 
     //      - If not found valid path in the url (or we mentioning the wrong url) then by default it will rendering the not found component. for that we use wild cart operator.
     //      - wild cart operator is present at the end of the array of the object.

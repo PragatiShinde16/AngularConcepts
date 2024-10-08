@@ -15,6 +15,11 @@
                     - It is atribute directive. 
 -->
 
+<!-- * Routing using navigate method :-
+                        - It works on .ts file(component file).
+                        - It is also called as static routing. 
+-->
+
 <a routerLink="/Page1">Page1</a>
 <!-- 
     - here we do property binding
@@ -27,3 +32,16 @@
 -->
 <a [routerLink]="['/Page2', myid]">Page2</a>
 <a routerLink="/Follower">Follower</a>
+
+<hr>
+<!-- Routing using navigate method :-
+                        - It works on .ts file(component file).
+                        - It is also called as dynamic routing.
+-->
+<button class="btn btn-info m-2" (click) = "onPage1()">Page1</button>
+<button class="btn btn-info m-2" (click) = "onPage2()">Page2</button>
+<button class="btn btn-info m-2" (click) = "onFollower()">Follower</button>
+
+<!-- It is for lazy loading concept..... -->
+<hr>
+<a routerLink="user">User</a>

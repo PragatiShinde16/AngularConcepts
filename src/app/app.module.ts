@@ -32,6 +32,7 @@ import { Page2Component } from './page2/page2.component';
 import { FollowerComponent } from './follower/follower.component';
 import { MyfollowerComponent } from './myfollower/myfollower.component';
 import { NotfoundComponent } from './notfound/notfound.component';
+import { DemotdfComponent } from './demotdf/demotdf.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +64,7 @@ import { NotfoundComponent } from './notfound/notfound.component';
     FollowerComponent,
     MyfollowerComponent,
     NotfoundComponent,
+    DemotdfComponent,
   ],
   imports: [
     BrowserModule,

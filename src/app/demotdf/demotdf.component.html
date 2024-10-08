@@ -1,0 +1,62 @@
+<hr><hr>
+<h5>Template Driven Form(TDF) Demo......</h5>
+<p>demotdf works!</p>
+
+<!-- * Template Driven Form(TDF) :-
+                            - It is used for validation purpose.
+                            - Basic level validation you can perform on view file.
+                            - All validation perform on view file.
+
+                            ** FormControl :-
+                                - It is inbuilt class used for perform validation.
+                                - Properties of FormControl :-
+                                    1. valid
+                                    2. invalid
+                                    3. touched
+                                    4. pristine
+                                    5. dirty 
+                                            - Above five properties return boolean value. 
+                                    6. errors
+                                            - It is object.
+-->
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col">
+            <div class = "mt-2 mb-2">
+                <label for="">Username ::</label>
+                <!-- Q How to use FormControl ? 
+                    => Steps for use FormControl :-
+                                1. To create FormControl instance - for that we use ngModel without its notation & use name attribute
+                                2. then create template reference vatiable & assign it ngModel
+                                3. use errors object for that we have to use required attribute
+
+                        Below in input tag we perform all above steps
+                -->
+                <input type="text" placeholder="Enter the username.." class="form-control"
+                ngModel name="myUsername"
+                #username = "ngModel" required minlength="5"
+                >
+
+                <div class="alert alert-danger" *ngIf = "username.touched && !username.valid">
+                    ** Please enter the text
+                    <div class="alert alert-danger" *ngIf = "username.errors?.['minlength']">
+                        <!-- {{username.errors?.['minlength'].requiredLength}} :- It is used for take value dynamically -->
+                        ** Please enter the minimum {{username.errors?.['minlength'].requiredLength}} character
+                    </div>
+                </div>
+            </div>
+            <!-- Validation on different tag -->
+            <div class="mt-2 mb-2">
+                <label for="">comment ::</label>
+                <textarea class="form-control" placeholder="Enter the comment..."
+                    ngModel name = "mycomment"
+                    #comment = "ngModel" required>
+                </textarea>
+                <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+                    ** Please enter the comment...
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
