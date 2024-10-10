@@ -23,40 +23,75 @@
 <div class = "container">
     <div class = "row">
         <div class = "col">
-            <div class = "mt-2 mb-2">
-                <label for="">Username ::</label>
-                <!-- Q How to use FormControl ? 
-                    => Steps for use FormControl :-
-                                1. To create FormControl instance - for that we use ngModel without its notation & use name attribute
-                                2. then create template reference vatiable & assign it ngModel
-                                3. use errors object for that we have to use required attribute
+            <!-- *ngForm :-
+                        - It is attribute directive.
+                        - It use in form tag.
+                        - steps for use ngForm :-
+                                    1. Create template reference variable and assign it ngForm.
+                                    2. And then in button use disabled attribute and use ngForm properties.
 
-                        Below in input tag we perform all above steps
+                 *ngSubmit :-
+                        - It is event directive.
+                        - It use in form tag.
+                        - Syntax :- 
+                            (ngSubmit) = "event handler name"
+            -->
+            <form #f="ngForm" (ngSubmit) = "onSubmit(f)">
+                <!-- *json pipe :-
+                            - It is used for validate the data.
+                            - This functionality is only for developer for testing purpose(validation occur or not).
                 -->
-                <input type="text" placeholder="Enter the username.." class="form-control"
-                ngModel name="myUsername"
-                #username = "ngModel" required minlength="5"
-                >
+                {{f.value | json}}
+                <div class = "mt-2 mb-2">
+                    <label for="">Username ::</label>
+                    <!-- Q How to use FormControl ? 
+                        => Steps for use FormControl :-
+                                    1. To create FormControl instance - for that we use ngModel without its notation & use name attribute
+                                    2. then create template reference vatiable & assign it ngModel
+                                    3. use errors object for that we have to use required attribute
 
-                <div class="alert alert-danger" *ngIf = "username.touched && !username.valid">
-                    ** Please enter the text
-                    <div class="alert alert-danger" *ngIf = "username.errors?.['minlength']">
-                        <!-- {{username.errors?.['minlength'].requiredLength}} :- It is used for take value dynamically -->
-                        ** Please enter the minimum {{username.errors?.['minlength'].requiredLength}} character
+                            Below in input tag we perform all above steps
+                    -->
+                    <input type="text" placeholder="Enter the username.." class="form-control"
+                    ngModel name="myUsername"
+                    #username = "ngModel" required minlength="5"
+                    >
+
+                    <div class="alert alert-danger" *ngIf = "username.touched && !username.valid">
+                        ** Please enter the text
+                        <div class="alert alert-danger" *ngIf = "username.errors?.['minlength']">
+                            <!-- {{username.errors?.['minlength'].requiredLength}} :- It is used for take value dynamically -->
+                            ** Please enter the minimum {{username.errors?.['minlength'].requiredLength}} character
+                        </div>
                     </div>
                 </div>
-            </div>
-            <!-- Validation on different tag -->
-            <div class="mt-2 mb-2">
-                <label for="">comment ::</label>
-                <textarea class="form-control" placeholder="Enter the comment..."
-                    ngModel name = "mycomment"
-                    #comment = "ngModel" required>
-                </textarea>
-                <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
-                    ** Please enter the comment...
+
+                <!-- For password authentication -->
+                <div class = "mt-2 mb-2">
+                    <label for="">Password ::</label>
+                    <input type="password" class="form-control" placeholder="Enter Password...."
+                        ngModel name="mypassword"
+                        #password = "ngModel" required pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()])[A-Za-z\d!@#$%^&*()]{8,}$
+                        "    
+                    >
+                    <div class="alert alert-danger" *ngIf = "password.errors?.['pattern'] && !password.touched">
+                        ** Please enter the valid password which contain one uppercase, one lowercase, one number, one special symbol...
+                    </div>
                 </div>
-            </div>
+                
+                <!-- Validation on different tag -->
+                <div class="mt-2 mb-2">
+                    <label for="">comment ::</label>
+                    <textarea class="form-control" placeholder="Enter the comment..."
+                        ngModel name = "mycomment"
+                        #comment = "ngModel" required>
+                    </textarea>
+                    <div class="alert alert-danger" *ngIf="comment.touched && comment.invalid">
+                        ** Please enter the comment...
+                    </div>
+                </div>
+                <button [disabled] = "!f.valid" class="btn btn-outline-success form-control">Submit</button>
+            </form>
         </div>
     </div>
 </div>
